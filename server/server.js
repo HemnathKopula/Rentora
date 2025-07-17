@@ -6,6 +6,10 @@ import userRouter from "./routes/userRoutes.js";
 import ownerRouter from "./routes/ownerRoutes.js";
 import bookingRouter from "./routes/bookingRoutes.js";
 
+app.use(cors({
+  origin: 'https://rentora-ebon.vercel.app', // allow your frontend domain
+  credentials: true
+}));
 // Initialize Express App
 const app = express()
 
